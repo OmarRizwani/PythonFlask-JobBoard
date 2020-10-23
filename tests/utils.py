@@ -7,7 +7,6 @@ import collections
 from bs4 import BeautifulSoup
 from jinja2 import Environment, PackageLoader, exceptions, meta, nodes
 
-
 env = Environment(loader=PackageLoader("jobs", "templates"))
 
 
@@ -266,7 +265,7 @@ def template_variables(name):
 
 
 def template_exists(name):
-    return os.path.isfile("jobs/templates/" + name + ".html")
+    return os.path.isfile('jobs/templates/' + name + '.html')
 
 
 def template_source(name):

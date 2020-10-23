@@ -1,7 +1,7 @@
 import pytest
 import inspect
 
-from .utils import *
+from tests.utils import *
 from jobs import app
 
 
@@ -31,10 +31,10 @@ def test_app_create_flask_app_module1():
 
 @pytest.mark.test_index_template_module1
 def test_index_template_module1():
-    template_dir = os.path.isdir("jobs/templates")
+    template_dir = os.path.isdir('jobs/templates')
     assert template_dir, "The `templates` folder has not been created."
 
-    index_exists = template_exists("index")
+    index_exists = template_exists('index')
     assert (
         index_exists
     ), "The `index.html` template does not exist in the `templates` folder."
