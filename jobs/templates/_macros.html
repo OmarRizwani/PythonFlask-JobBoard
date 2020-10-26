@@ -11,6 +11,7 @@
         <p>
           <a>
             {{ job['employer_name'] }}
+            href="{{ url_for('employer', employer_id=job['employer_id']) }}"
             ${{ job['salary'] }}
             {{ job['description'] }}
           </a>
