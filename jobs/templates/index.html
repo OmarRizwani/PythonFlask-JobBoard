@@ -7,5 +7,6 @@
     <div class="column is-one-fifth">
     </div>
   </div>
+{% from '_macros.html' import show_jobs with context %}
 {{ show_jobs(jobs) }}
 {% endblock %}
