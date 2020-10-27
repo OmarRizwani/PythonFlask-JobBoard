@@ -3,7 +3,7 @@
   <div class="card adjust-height">
     <header class="card-header">
       <p class="card-header-title">
-        <a>{{ job['title'] }} href="{{ url_for('job', job_id=job['id']) }}"</a>
+        <a>{{ job['title'] }} <br>Job Ref - "{{ url_for('job', job_id=job['id']) }}"</a>
       </p>
     </header>
     <div class="card-content">
@@ -11,9 +11,9 @@
         <p>
           <a>
             {{ job['employer_name'] }}
-            href="{{ url_for('employer', employer_id=job['employer_id']) }}"
-            ${{ job['salary'] }}
-            {{ job['description'] }}
+            <br>Company Ref - "{{ url_for('employer', employer_id=job['employer_id']) }}"
+            <br>Annual Salary - ${{ job['salary'] }}<br>
+            <br>{{ job['description'] }}
           </a>
         </p>
       </div>

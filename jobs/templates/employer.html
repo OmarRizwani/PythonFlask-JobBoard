@@ -6,7 +6,8 @@
         <p>{{ employer['description'] }}</p>
     </div>
 </div>
-<h2>Jobs</h2>
+<h2>Jobs for {{ employer['name'] }}</h2>
+{% from '_macros.html' import show_jobs with context %}
 {{ show_jobs(jobs) }}
   <h2>Reviews</h2>
     {% for review in reviews %}

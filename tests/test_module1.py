@@ -44,10 +44,10 @@ def test_index_template_module1():
         h1_exists
     ), "The `<h1>` in the `index.html` template does not contain the contents 'Jobs'."
 
-    h1_jobs = template_find("index", "h1", limit=1)[0].text == "Jobs"
+    h1_jobs = template_find("index", "h1", limit=1)[0].text == "Main Jobs Board"
     assert (
         h1_jobs
-    ), "The `<h1>` in the `index.html` template does not contain the contents 'Jobs'."
+    ), "The `<h1>` in the `index.html` template does not contain the contents 'Main Jobs Board'."
 
 
 @pytest.mark.test_app_index_route_function_module1
