@@ -2,17 +2,17 @@
 {% macro show_job(job) %}
   <div class="card adjust-height">
     <header class="card-header">
-      <p class="card-header-title">
-        <a>{{ job['title'] }} <br>Job Ref - "{{ url_for('job', job_id=job['id']) }}"</a>
+      <p class="card-header-title" href="{{ url_for('job', job_id=job['id']) }}">
+        <a>{{ job['title'] }}</a>
       </p>
     </header>
     <div class="card-content">
       <div class="content">
         <p>
-          <a>
+          <a href="{{ url_for('employer', employer_id=job['employer_id']) }}">
             {{ job['employer_name'] }}
-            <br>Company Ref - "{{ url_for('employer', employer_id=job['employer_id']) }}"
-            <br>Annual Salary - ${{ job['salary'] }}<br>
+            <br>Annual Salary - ${{ job['salary'] }}
+            <br>Job Description -
             <br>{{ job['description'] }}
           </a>
         </p>
